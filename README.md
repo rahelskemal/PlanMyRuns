@@ -27,4 +27,15 @@ Back-end:
 
 Front-end: 
 - React
-- Bootstrap 
+- React Bootstrap 
+
+## App Set Up
+
+After cloning this repo, install Python along with Flask and flask_sqlalchemy in order to use PostgresSQL. 
+
+Install folium using: 
+pip install folium and import it into the file
+
+Install GeoPy using:
+pip install geopy and importing it into the file
+
