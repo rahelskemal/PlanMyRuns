@@ -14,4 +14,17 @@ Based on user input which includes user's desired end goal such as a certain rac
 
 A second critical feature of this app, is it's ability to create various routes from the same starting and ending location based on that weeks recommended milage.  
 
+## Dependencies
 
+PMR Relies on:
+
+Back-end: 
+- PostgreSQL Database
+- Flask
+- Google Maps API for Python
+- Folium
+- GeoPy
+
+Front-end: 
+- React
+- Bootstrap 
