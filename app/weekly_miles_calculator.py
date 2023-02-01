@@ -8,15 +8,16 @@ from dotenv import load_dotenv
 
 
 
-def calculate_weekly_goal(user_info):
-
+def calculate_weekly_goal(user_info: int) -> list[int]:
+    if type(user_info) == str:
+        raise ValueError("input must be an integer")
     # user_info = User.query.get(id)
     goal_date = user_info.goal_date
     start_date = user_info.desired_start_date
     # Define the total mileage goal for a half-marathon
     goal_distance = 13.1 
 
-
+    #round to the nearest 1 or 2
     # Calculate the number of weeks until the goal date
     weeks_until_goal = (goal_date - start_date).days / 7
     weeks_to_goal = int(weeks_until_goal)

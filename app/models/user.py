@@ -4,6 +4,8 @@ from app.route_option_2 import get_points_of_interest
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(100), unique=True)
+    password = db.Column(db.String(100))
     first_name = db.Column(db.String)
     last_name = db.Column(db.String)
     desired_start_date = db.Column(db.DateTime)
