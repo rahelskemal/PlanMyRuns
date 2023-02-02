@@ -28,6 +28,8 @@ def validate_id(cls, id):
 def create_user_profile():
     request_body=request.get_json()
     new_user = User( 
+        email = request_body["email"],
+        password = request_body["password"],
         first_name = request_body["first_name"],
         last_name = request_body["last_name"],
         desired_start_date = datetime.strptime(request_body["desired_start_date"],"%m-%d-%Y").date(),
@@ -43,6 +45,8 @@ def create_user_profile():
 
     return {
         "id": new_user.id,
+        "email": new_user.email,
+        "password": new_user.password,
         "first_name": new_user.first_name,
         "last_name": new_user.last_name,
         "desired_start_date": new_user.desired_start_date,

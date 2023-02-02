@@ -21,12 +21,16 @@ class User(db.Model):
         "id": self.id,
         "first_name": self.first_name,
         "last_name": self.last_name,
+        "email": self.email,
+        "password": self.password,
         "desired_start_date": self.desired_start_date,
         "goal_date" : self.goal_date,
         "city" : self.city,
         "street" : self.street,
         "zip_code" : self.zip_code,
         "state" : self.state,
+        # "weekly_goal": calculate_weekly_goal(self),
+        # "nearby_parks": get_points_of_interest(self)
         
     }
 
@@ -36,6 +40,8 @@ class User(db.Model):
         "id": self.id,
         "first_name": self.first_name,
         "last_name": self.last_name,
+        "email": self.email,
+        "password": self.password,
         "desired_start_date": self.desired_start_date,
         "goal_date" : self.goal_date,
         "city" : self.city,
