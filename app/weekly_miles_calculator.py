@@ -4,13 +4,13 @@ from sqlalchemy.orm import Session
 from app import db
 import datetime
 from dotenv import load_dotenv
-# from app.models.user import User 
+from flask import abort, make_response
 
 
 
 def calculate_weekly_goal(user_info: int) -> list[int]:
-    if type(user_info) == str:
-        raise ValueError("input must be an integer")
+    # if type(user_info) == str:
+    #     raise ValueError("input must be an integer")
     # user_info = User.query.get(id)
     goal_date = user_info.goal_date
     start_date = user_info.desired_start_date
@@ -37,19 +37,20 @@ def calculate_weekly_goal(user_info: int) -> list[int]:
 
     first_time = True
 
-    if weeks_to_goal < 8 or weeks_to_goal > 16:
-        raise ValueError("Your training must be between 8-16 weeks")
-    else:
+    # if weeks_to_goal < 8 or weeks_to_goal > 16:
+    #     # raise ValueError("Your training must be between 8-16 weeks")
+    #     abort(make_response ({"message":"invalid"}, 400))
+    # else:
         # while current_weekly_mileage <= max_weekly_goal and week <= weeks_to_goal:
-        for _ in range(weeks_to_goal):
-            if current_weekly_mileage < max_weekly_goal:
-                if first_time:
-                    first_time = False
-                else:
-                    current_weekly_mileage += increment_per_week
-                    # rcurrent_weekly_mileage = round(current_weekly_mileage/10)*10
-                    
-                weekly_goal_list.append(current_weekly_mileage)
+    for _ in range(weeks_to_goal):
+        if current_weekly_mileage < max_weekly_goal:
+            if first_time:
+                first_time = False
+            else:
+                current_weekly_mileage += increment_per_week
+                # rcurrent_weekly_mileage = round(current_weekly_mileage/10)*10
+                
+            weekly_goal_list.append(current_weekly_mileage)
                 
         return weekly_goal_list
 
