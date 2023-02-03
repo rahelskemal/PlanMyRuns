@@ -47,8 +47,9 @@ def calculate_weekly_goal(user_info: int) -> list[int]:
                     first_time = False
                 else:
                     current_weekly_mileage += increment_per_week
+                    rcurrent_weekly_mileage = round(current_weekly_mileage/10)*10
                     
-                weekly_goal_list.append(current_weekly_mileage)
+                weekly_goal_list.append(rcurrent_weekly_mileage)
                 
         return weekly_goal_list
 
