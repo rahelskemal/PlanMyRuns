@@ -29,8 +29,8 @@ class User(db.Model):
         "street" : self.street,
         "zip_code" : self.zip_code,
         "state" : self.state,
-        # "weekly_goal": calculate_weekly_goal(self),
-        # "nearby_parks": get_points_of_interest(self)
+        "weekly_goal": calculate_weekly_goal(self),
+        "nearby_parks": get_points_of_interest(self)
         
     }
 
