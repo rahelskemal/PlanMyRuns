@@ -52,7 +52,7 @@ def calculate_weekly_goal(user_info: int) -> list[int]:
                 
             weekly_goal_list.append(current_weekly_mileage)
                 
-        return weekly_goal_list
+    return weekly_goal_list
 
     """
     calculate how many weeks we have until the goal date
