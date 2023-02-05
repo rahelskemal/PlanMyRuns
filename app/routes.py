@@ -46,6 +46,7 @@ def create_user_profile():
 
     return {
         "id": new_user.id,
+        "goal":new_user.goal,
         "email": new_user.email,
         "password": new_user.password,
         "first_name": new_user.first_name,
