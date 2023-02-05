@@ -14,6 +14,7 @@ class User(db.Model):
     street = db.Column(db.String)
     zip_code = db.Column(db.Integer)
     state = db.Column(db.String)
+    goal = db.Column(db.String(100))
 
 
     def user_dict(self):
@@ -30,7 +31,7 @@ class User(db.Model):
         "zip_code" : self.zip_code,
         "state" : self.state,
         "weekly_goal": calculate_weekly_goal(self),
-        "nearby_parks": get_points_of_interest(self)
+        # "nearby_parks": get_points_of_interest(self)
         
     }
 
@@ -49,5 +50,5 @@ class User(db.Model):
         "zip_code" : self.zip_code,
         "state" : self.state,
         "weekly_goal": calculate_weekly_goal(self),
-        "nearby_parks": get_points_of_interest(self)
+        # "nearby_parks": get_points_of_interest(self)
         }

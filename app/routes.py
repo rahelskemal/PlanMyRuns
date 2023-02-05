@@ -37,7 +37,8 @@ def create_user_profile():
         city = request_body["city"],
         street = request_body["street"],
         zip_code = request_body["zip_code"],
-        state = request_body["state"]
+        state = request_body["state"],
+        goal = request_body["goal"]
     )
 
     db.session.add(new_user)
