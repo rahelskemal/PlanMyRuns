@@ -97,15 +97,15 @@ def update_user_start_date(id):
     if "goal_date" in request_body:
         user.goal_date = request_body["goal_date"]
     if "state" in request_body:
-        user.goal_date = request_body["state"]
+        user.state = request_body["state"]
     if "street" in request_body:
-        user.goal_date = request_body["street"]
+        user.street = request_body["street"]
     if "city" in request_body:
-        user.goal_date = request_body["city"]
+        user.city = request_body["city"]
     if "zip_code" in request_body:
-        user.goal_date = request_body["zip_code"]
+        user.zip_code = request_body["zip_code"]
     if "goal" in request_body:
-        user.goal_date = request_body["goal"]
+        user.goal = request_body["goal"]
 
     db.session.commit()
     
