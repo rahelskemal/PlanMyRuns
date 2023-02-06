@@ -31,6 +31,7 @@ class User(db.Model):
         "zip_code" : self.zip_code,
         "state" : self.state,
         "weekly_goal": calculate_weekly_goal(self),
+        "goal": self.goal
         # "nearby_parks": get_points_of_interest(self)
         
     }
@@ -49,6 +50,7 @@ class User(db.Model):
         "street" : self.street,
         "zip_code" : self.zip_code,
         "state" : self.state,
+        "goal": self.goal,
         "weekly_goal": calculate_weekly_goal(self),
         # "nearby_parks": get_points_of_interest(self)
         }
