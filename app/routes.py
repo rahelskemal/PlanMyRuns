@@ -104,8 +104,8 @@ def update_user_start_date(id):
         user.city = request_body["city"]
     if "zip_code" in request_body:
         user.zip_code = request_body["zip_code"]
-    if "goal" in request_body:
-        user.goal = request_body["goal"]
+    # if "goal" in request_body:
+    #     user.goal = request_body["goal"]
 
     db.session.commit()
     
